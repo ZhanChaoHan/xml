@@ -1,9 +1,7 @@
 package com.jachs.dom4j.writer;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.UnsupportedEncodingException;
 
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
@@ -33,6 +31,7 @@ public class Test1 {
 		// 输出xml文件
 		XMLWriter writer = new XMLWriter(new FileOutputStream(PATH), format);
 		writer.write(doc);
+		writer.close();
 		System.out.println("dom4j CreateDom4j success!");
 	}
 }
